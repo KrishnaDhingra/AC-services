@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Saiful Air Conditioning | Fast &amp; Reliable AC Repair</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-highest": "#d9dde0",
+            "outline": "#747779",
+            "error": "#b31b25",
+            "error-container": "#fb5151",
+            "on-tertiary-fixed-variant": "#563000",
+            "on-primary-container": "#00214e",
+            "on-primary": "#f0f2ff",
+            "on-secondary-fixed-variant": "#4e5f5e",
+            "on-tertiary-container": "#4a2800",
+            "surface-container-low": "#eef1f3",
+            "tertiary-container": "#ff9800",
+            "on-secondary-fixed": "#324242",
+            "on-error-container": "#570008",
+            "tertiary-dim": "#764400",
+            "secondary-container": "#d4e6e5",
+            "background": "#f5f7f9",
+            "on-background": "#2c2f31",
+            "error-dim": "#9f0519",
+            "on-error": "#ffefee",
+            "on-tertiary-fixed": "#271300",
+            "secondary-fixed-dim": "#c6d8d7",
+            "secondary-fixed": "#d4e6e5",
+            "surface-container": "#e5e9eb",
+            "inverse-primary": "#4a8eff",
+            "on-secondary-container": "#445554",
+            "surface-dim": "#d0d5d8",
+            "inverse-on-surface": "#9a9d9f",
+            "inverse-surface": "#0b0f10",
+            "on-surface": "#2c2f31",
+            "surface-variant": "#d9dde0",
+            "on-surface-variant": "#595c5e",
+            "on-tertiary": "#fff0e5",
+            "primary-fixed-dim": "#5091ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-tint": "#0058ba",
+            "primary": "#0058ba",
+            "tertiary": "#874e00",
+            "surface": "#f5f7f9",
+            "secondary": "#4e5f5e",
+            "primary-dim": "#004da4",
+            "tertiary-fixed-dim": "#ec8c00",
+            "outline-variant": "#abadaf",
+            "secondary-dim": "#425352",
+            "surface-bright": "#f5f7f9",
+            "on-secondary": "#e4f6f5",
+            "on-primary-fixed-variant": "#002a60",
+            "on-primary-fixed": "#000000",
+            "tertiary-fixed": "#ff9800",
+            "surface-container-high": "#dfe3e6",
+            "primary-container": "#6c9fff",
+            "primary-fixed": "#6c9fff"
+          },
+          fontFamily: {
+            "headline": ["Plus Jakarta Sans"],
+            "body": ["Manrope"],
+            "label": ["Manrope"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "1.5rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .breeze-gradient {
+      background: linear-gradient(135deg, #0058ba 0%, #6c9fff 100%);
+    }
+
+    .text-glow {
+      text-shadow: 0 0 20px rgba(108, 159, 255, 0.4);
+    }
+
+    /* ── Hamburger lines ── */
+    .hamburger-line {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #0058ba;
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.2s ease;
+      transform-origin: center;
+    }
+    #hamburger-btn.menu-active .hamburger-line:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    #hamburger-btn.menu-active .hamburger-line:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    #hamburger-btn.menu-active .hamburger-line:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* ── Mobile slide-down menu ── */
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.35s ease, opacity 0.25s ease;
+      border-top: 1px solid transparent;
+    }
+    #mobile-menu.menu-open {
+      max-height: 480px;
+      opacity: 1;
+      border-top-color: rgba(0,0,0,0.07);
+    }
+  </style>
+</head>
+
+<body class="bg-surface font-body text-on-surface">
+  <!-- TopNavBar -->
+  <nav id="main-nav" class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl top-0 sticky z-50 shadow-[0px_20px_40px_rgba(0,0,0,0.06)]">
+
+    <!-- Main bar -->
+    <div class="flex justify-between items-center w-full px-6 md:px-8 py-4 max-w-7xl mx-auto">
+
+      <!-- Brand -->
+      <div class="text-xl font-bold tracking-tighter text-blue-800 dark:text-blue-300 font-headline">AC Repair &amp; Services</div>
+
+      <!-- Desktop nav links (>=1024px only) -->
+      <div class="hidden lg:flex gap-8 items-center">
+        <a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-600 transition-colors duration-300 font-headline tracking-tight" href="#">Services</a>
+        <a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-500 transition-colors duration-300 font-headline tracking-tight" href="#">Gallery</a>
+        <a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-500 transition-colors duration-300 font-headline tracking-tight" href="#">Why Us</a>
+        <a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-500 transition-colors duration-300 font-headline tracking-tight" href="#">Reviews</a>
+      </div>
+
+      <!-- Right side -->
+      <div class="flex items-center gap-3">
+        <!-- Desktop CTA -->
+        <button class="hidden lg:block bg-primary text-on-primary px-6 py-2.5 rounded-xl font-bold scale-95 active:scale-90 transition-transform shadow-lg">Call Now</button>
+
+        <!-- Hamburger (mobile only) -->
+        <button
+          id="hamburger-btn"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="lg:hidden flex flex-col justify-center items-center gap-[5px] w-10 h-10 rounded-lg hover:bg-slate-100 transition-colors focus:outline-none"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile dropdown menu -->
+    <div id="mobile-menu" class="lg:hidden bg-white dark:bg-slate-900">
+      <div class="flex flex-col px-6 pb-5 pt-1 gap-1">
+        <a href="#" class="py-3 px-4 rounded-lg text-blue-700 font-bold border-l-4 border-blue-600 bg-blue-50 font-headline tracking-tight">Services</a>
+        <a href="#" class="py-3 px-4 rounded-lg text-slate-700 font-medium hover:text-blue-600 hover:bg-blue-50 font-headline tracking-tight transition-colors">Gallery</a>
+        <a href="#" class="py-3 px-4 rounded-lg text-slate-700 font-medium hover:text-blue-600 hover:bg-blue-50 font-headline tracking-tight transition-colors">Why Us</a>
+        <a href="#" class="py-3 px-4 rounded-lg text-slate-700 font-medium hover:text-blue-600 hover:bg-blue-50 font-headline tracking-tight transition-colors">Reviews</a>
+        <a href="tel:+911234567890" class="mt-3 flex items-center justify-center gap-2 bg-primary text-white py-3 px-4 rounded-xl font-bold shadow active:scale-95 transition-transform">
+          <span class="material-symbols-outlined text-base">call</span> Call Now
+        </a>
+      </div>
+    </div>
+
+  </nav>
+  <!-- Hero Section -->
+  <section class="relative min-h-[870px] flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img class="w-full h-full object-cover object-center brightness-50"
+        data-alt="Professional air conditioning technician in blue uniform inspecting an indoor AC unit with precise tools in a modern home"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB90beEIaxiFDIxtUcEFvPau9L8auWAYt2kZfA5U-1P12bZY_38Ouwd-UzYW75uuzI_Fs8QB96NwuPCQGPvAUpnaAWYpub2R-03wr5Ey_amLJ-xw4s8hTnnMC_WQO5cCSIdhiKna6LmrSlF8P7_tPqSDwKE8DmSMp1weLPFNOMtgSklZDt2xhl3YHjRZudWzrkkBukHnQA0eGVXPwOKbCXtklVi5yaMX6R_39VMGoCFeb8E1v6hM91B1nSHHGyjOXDcy6HxTZ3zeSfl" />
+      <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-8 w-full grid md:grid-cols-2 gap-12 items-center">
+      <div class="space-y-8">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-semibold text-sm">
+          <span class="material-symbols-outlined text-sm">verified_user</span>
+          Trusted by 500+ Homes
+        </div>
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white font-headline leading-[1.1] tracking-tight">
+          Fast &amp; Reliable <br /> <span class="text-primary-fixed">AC Repair</span> at Your Doorstep
+        </h1>
+        <p class="text-lg md:text-xl text-white/90 max-w-lg leading-relaxed">
+          Same-day service. Trusted by hundreds of local homes. Stay cool with our professional climate experts.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-4">
+          <button
+            class="tertiary-container bg-tertiary-container text-on-tertiary-container px-8 py-4 rounded-xl font-bold text-lg hover:shadow-xl transition-all scale-100 hover:scale-105 active:scale-95">Call
+            Now</button>
+          <button
+            class="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all">Book
+            Service</button>
+        </div>
+      </div>
+      <div class="hidden md:flex flex-col gap-6 items-end">
+        <div
+          class="bg-white/90 backdrop-blur-lg p-6 rounded-xl shadow-2xl flex items-center gap-4 w-64 transform translate-x-[-20%]">
+          <div class="bg-primary/10 p-3 rounded-full text-primary">
+            <span class="material-symbols-outlined text-3xl" data-weight="fill">star</span>
+          </div>
+          <div>
+            <div class="font-bold text-2xl text-on-surface">4.9/5</div>
+            <div class="text-sm text-on-surface-variant">Customer Rating</div>
+          </div>
+        </div>
+        <div class="bg-white/90 backdrop-blur-lg p-6 rounded-xl shadow-2xl flex items-center gap-4 w-72">
+          <div class="bg-secondary-container p-3 rounded-full text-secondary">
+            <span class="material-symbols-outlined text-3xl">bolt</span>
+          </div>
+          <div>
+            <div class="font-bold text-xl text-on-surface">Same Day Service</div>
+            <div class="text-sm text-on-surface-variant">Fast Response Guaranteed</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Social Proof Strip -->
+  <section class="bg-gradient-to-r from-secondary-container to-primary-container/20 py-12">
+    <div class="max-w-7xl mx-auto px-8 flex flex-wrap justify-center md:justify-between items-center gap-8">
+      <div class="flex -space-x-4">
+        <img class="w-14 h-14 rounded-full border-4 border-white object-cover"
+          data-alt="Portrait of a smiling middle-aged man outdoors"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLh3dbXOM6fyAVOBDY_PftWwofguQ3tJn1m0UGO4OQ1oQXGFBO8K-_TVIRWTCQuLrNV111qoZTK7MfObE9nywMoYxMLkgTs5mu5Vd5n5jB6nCHm-7y0I3by5LeUv-guEZ-mmcOZRQlxsgb-DHngYcp_z8N5OVCe_AVI7tieguYEEXbmx6MeCW3dW_N-VqB5NlR5QWQWQY_HM4WScSOmeqwxb8AzCTa38IHuYISnJlbQMscck-wvz8zIwHoRvoW1LmKa0XhQ-IpqR-W" />
+        <img class="w-14 h-14 rounded-full border-4 border-white object-cover"
+          data-alt="Portrait of a smiling young professional woman"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUZT-iQ9RAwr3da3aZYCZk8mhOkN7x_YKL4j59CZFZh0sqc85mnO5dnKv8NUekoK7qLPigFhAzTf6nzdKvTN5TbOd3YtisCqvDIFcYHZIy9LyPPUScdC_ZgGx2_4Zkp0VDy7l_q6zxdFlXBoLuaw2csr12b8fbgYxFufWzOl6TfwLRl_067kVWIy-wgLBI_tuf8vfba0rfFK-Gd-nSzODsXf8HZpWoi6JMCqWi6zdOupaWHIchwwf_G2dlegL9OvWYFGKVaKaRObk3" />
+        <img class="w-14 h-14 rounded-full border-4 border-white object-cover"
+          data-alt="Portrait of a smiling man with glasses"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuACHNHVnfCOPHhZTT4lBW-v_quldu78EDOb-XNycTzUr_6gDBaU4Ur6Kn719dWxMLu0Xy3GzOYLoGXO27DeYbfqroxicRCU151P2GtqNy2HKbqnvilj2L_7AfVKoh-9QNfUv4_gILmhOknIe56p06hLdzvUrF6iZtrz13la04nSs3iErYh4UOwjjZ61X4xogEeOiriMITUMe4ho94J3Vt4kCw3VaJUBGCR1DvhXoJWvmq9jUvE3ccj3bQsWuE2-cVJxGmgNEF6-Kalg" />
+        <div
+          class="w-14 h-14 rounded-full border-4 border-white bg-primary text-white flex items-center justify-center font-bold text-sm">
+          +2k</div>
+      </div>
+      <div class="flex items-center gap-12">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary" data-weight="fill">verified</span>
+          <span class="font-bold text-on-surface">Certified Experts</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary" data-weight="fill">payments</span>
+          <span class="font-bold text-on-surface">No Hidden Costs</span>
+        </div>
+        <div class="hidden lg:flex items-center gap-2">
+          <span class="material-symbols-outlined text-primary" data-weight="fill">schedule</span>
+          <span class="font-bold text-on-surface">24/7 Availability</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services Grid -->
+  <section class="py-24 px-8 max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <span class="text-primary font-bold tracking-widest text-sm uppercase">Our Expertise</span>
+      <h2 class="text-4xl md:text-5xl font-extrabold font-headline mt-4 text-on-surface">Complete Air Cooling Solutions
+      </h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Card 1 -->
+      <div
+        class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_20px_40px_rgba(0,0,0,0.04)] hover:shadow-[0px_30px_60px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            data-alt="Close up of a technician fixing internal components of an air conditioning unit"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA348wp4LDeNR5c0XnVRgz5DL56TBpR3T57nJVSDLLXEnLX_-QyUrOogV5x5n2EEzqH25FyjhmJFqsBdkR-aRGSFqaxt5HZMoukFSEReoi7ohbB8tqOhm7-EvvZ8y8mSReARMp8yrTwNR__vf_c-JnkZ6aTFAV0sNnDux1M0YuXbeZQkvHZQi0SVyWXxBaWBsGr0AvvGAJCeQ9Jn-OPo6JodEiAMFQWYKHMQNMnn5hq16SKdgXCiAsVNQj48A8NxRY3x2kf0le9u0NF" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold font-headline mb-2">AC Repair</h3>
+          <p class="text-on-surface-variant text-sm mb-6">Expert diagnostic and fix for all cooling issues and component
+            failures.</p>
+          <button
+            class="w-full py-3 rounded-lg bg-surface-container-high text-primary font-bold hover:bg-primary hover:text-white transition-colors">Book
+            Now</button>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div
+        class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_20px_40px_rgba(0,0,0,0.04)] hover:shadow-[0px_30px_60px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            data-alt="New split air conditioner being installed on a white interior wall"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZHQWsICZyHYsINuCibSia7zqIqhhn9E9ICuYV3YMssrpN139li44PZ9q_1zNL2nb0CnxTnAURAWOCyc7VB51-YHge7PLR8qqknDASnbqxNyKpD37SPG3apVUSdWrKn_QiGstkv7rGhNQSoIbMOERddQ-2QsSH9jkY_RP4dXw99EGxpXYgqqRJxXCn9HYI3cXf_3BXMohw-UNUhO9Lyl4KpXiy6LgWDybd8eSjXGwmWmxKKXb-IrQYfenazlp2w6RrFcSB1q0APA_f" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold font-headline mb-2">Installation</h3>
+          <p class="text-on-surface-variant text-sm mb-6">Precision mounting and commissioning for maximum efficiency
+            and longevity.</p>
+          <button
+            class="w-full py-3 rounded-lg bg-surface-container-high text-primary font-bold hover:bg-primary hover:text-white transition-colors">Book
+            Now</button>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div
+        class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_20px_40px_rgba(0,0,0,0.04)] hover:shadow-[0px_30px_60px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            data-alt="Technician checking gas pressure in an outdoor AC condenser unit with gauges"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzOAM2SpvcRNLYdWhP6D09tGmQDplYZfHU-nncDUIaU0SRigjHAChscTc4yV5-dybCH6VKbYOhDk7A0byDlXRsHzuajWzA8-nUOOBxjx6oHrXzCYBBcK2zky0Unxwr1ClrIUcba-0xpWCmuYaghc2xo067UClFfxUg_8Lm0DcKGtkL30g5md9gleGZTZWX_XQJCylwDBHuLdbgjlMg63Gd675roxfp8_epq6Rfn_4DnORWZVU6z_D7RzEpqfzBq7P2QnQ933B0sIWk" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold font-headline mb-2">Gas Refilling</h3>
+          <p class="text-on-surface-variant text-sm mb-6">Environmentally compliant refrigerant top-up and leak
+            detection services.</p>
+          <button
+            class="w-full py-3 rounded-lg bg-surface-container-high text-primary font-bold hover:bg-primary hover:text-white transition-colors">Book
+            Now</button>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div
+        class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_20px_40px_rgba(0,0,0,0.04)] hover:shadow-[0px_30px_60px_rgba(0,0,0,0.1)] transition-all duration-500 hover:-translate-y-2">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            data-alt="Technician cleaning the filters of a wall-mounted air conditioner"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBYfNDmOo8uO1QnzpsV8Q50gNouIukI2M9FgWsA8g6Wk6xYw4YaqlJfZ7GQNcI7lKL1zcfv0u3XPt-_KULnwD9Nptdm9vThQjyGBlTNF-2VtIdb5vmZi6DuuVkRpaxgfMBpxaQ9Z4BsmXZbwu3sIAq07jdk_buR5H9Xe97TEOUVV9-7qdsOOXNzK7xTMmgLYBiQ-ZEvu707hcSVBjDfyDlU5Va6_StTUs3sJdHk4SpaXqFcvRFLoABn5AOJL1JBFwykVaAFgV_LwEN" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold font-headline mb-2">Maintenance</h3>
+          <p class="text-on-surface-variant text-sm mb-6">Seasonal tune-ups and filter cleaning to keep your air fresh
+            and power bills low.</p>
+          <button
+            class="w-full py-3 rounded-lg bg-surface-container-high text-primary font-bold hover:bg-primary hover:text-white transition-colors">Book
+            Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Real Work Gallery -->
+  <section class="py-24 bg-surface-container-low">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div>
+          <span class="text-primary font-bold tracking-widest text-sm uppercase">The Raj Difference</span>
+          <h2 class="text-4xl font-extrabold font-headline mt-4 text-on-surface">Delivering Coolness Across Delhi</h2>
+        </div>
+        <p class="max-w-md text-on-surface-variant">Real results from real homes. We take pride in clean, professional
+          installations and robust repairs.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-[800px] md:h-[600px]">
+        <div class="md:col-span-2 relative rounded-xl overflow-hidden group">
+          <img class="w-full h-full object-cover"
+            data-alt="Wide shot of a clean commercial AC installation on a modern rooftop during sunset"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3TD-faUj6chefn3C9qQJl_eO21x1kuutr-5vHN5E3360QZqPrI-duKiFOxfQ9pIkdujpnr9TVYf0h1QAR4wUhjmFmrLIMQFGnkVztwhwrvo0D-w93PHi-f7XUtGcdntW1RQyexBulJX07AmuvNBB2lkfkgpTaUlBp4wIvfYRKXHFKX-pEXNebiYS6fuDFeJGvSJNQyzgJndchJjr_zNaNHapVhKOLqVL8KanjMs97bdPbR0d5kAUUc42RA3DbNg64hqxm9DARSsTm" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-8 flex flex-col justify-end">
+            <span class="bg-primary text-white px-3 py-1 rounded-full text-xs font-bold w-max mb-2">Delhi Service</span>
+            <h4 class="text-white text-2xl font-bold">Centralized System Setup</h4>
+          </div>
+        </div>
+        <div class="relative rounded-xl overflow-hidden group">
+          <img class="w-full h-full object-cover"
+            data-alt="Before and after split view of a dirty AC filter versus a deep-cleaned pristine filter"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCGOFyZvY4msi16eXY4XzjgqRudsQFm9FRlmmUmhmQORbleZGi50J_HRkpxNVjk2DwJXXz4pVPVMvr-JVFzuuFrcbFgKkVpTppTZ6W-f67sJaUgcxuNtIsezUAEo-k2C7S3T6JGe6zw-RC3992ihYuRocQiKnltUaimNOCc53-o7Wp0lCAtlRZG2QwOmat35tY5KFuzZNTTtwW9c-GIK50HWx1wEO23Zmwjm1qfLEdp4TlkpIHeSqR70zTDhERVTORuNZRPJtPX9nH" />
+          <div class="absolute top-4 left-4 bg-tertiary text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
+            Deep Clean</div>
+        </div>
+        <div class="relative rounded-xl overflow-hidden group">
+          <img class="w-full h-full object-cover"
+            data-alt="Technician testing air flow with a digital meter after finishing a residential repair"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGHBj8UltolmrE1dNVa92E9GZBW5PC6KPlUHj7qGRe5Vq8iwNOcrnOU6lWyU_9RbWZZd1pa8cL9zhXkmoiAFft1wNeW6Ms4Ijw1AgUNGSLfcpNS7Ic5xFO_rnlOHJXRxkt34XvqzKb1HQ23ZKVQbIorMGY8y9c7GSYvAwNfZOxf63SlFs429Ext-VDokdFBG2anvI0ojgGtacEC2-KikgtlruwJ81tLF5LBWmDFel7Tx7njfTCgwXiOLoX5rWcYV6a1F-yrSdgoz33" />
+          <div
+            class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <span class="text-white font-bold">Residential Repair</span>
+          </div>
+        </div>
+        <div class="md:col-span-2 relative rounded-xl overflow-hidden group">
+          <img class="w-full h-full object-cover"
+            data-alt="Modern high-end office interior with perfectly integrated air conditioning vents"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQA9yNkVGPIe8okC9FqhBTqVI8o9z1FMuqZwmhpN9UM6rGm-9H48X71bgNqh8pGIF7vg1CwESBZVnm3CwaiRJdSqaXLIkzwHsS41g-BwkMAmVikUcrt92bz8ObSXsWCxZTrcDqHrKdunI8-fB-gEobTgWge2hr0mtJ60kPXFDlQSqMx-97fImIsWa0Q85dyu_YbL8h0NXjGQa0WwlhaWeohYN3L5M9WrMSsLPlhyJc1PzhWVEpfMSoWUnainDSARkiAL5vp-cnpsDW" />
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-8">
+            <div class="text-white">
+              <div class="font-bold text-xl">Corporate Partnership</div>
+              <p class="text-white/80 text-sm">Maintained for over 3 years</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Why Choose Us -->
+  <section class="py-24 px-8 max-w-7xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div class="relative">
+        <div class="aspect-square bg-secondary-container rounded-3xl overflow-hidden">
+          <img class="w-full h-full object-cover"
+            data-alt="Close-up of a technician's hands using professional tools to service a modern climate control unit"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ6DsFq3MogsSw7CCXtytrXfX-hAn9LSELld8MvtWC9ja7kTrtPH6XJaX4CpaLcTIi1CoHBUClaZ0UEj-OuLhRKmkVyXgWsVG_cY7ZCUMShUDwXbzZfBkdhckwtXiaTg0aYdS8T5QKoEoCeVU9XRiPGexXKE98_ew5J1ropaH9YBZ53ahDNYrlZKBdpBY1wVskIzfmBj-4XsQ6vHU7QI52mTR9enNyBS8V5w50x-Z2S2UWWar6Y3fCazvR7uvztzKsXLYKME7Aj_jY" />
+        </div>
+        <div class="absolute -bottom-8 -right-8 bg-white p-8 rounded-2xl shadow-2xl max-w-xs hidden lg:block">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="h-12 w-12 rounded-full bg-green-100 flex items-center justify-center text-green-600">
+              <span class="material-symbols-outlined font-bold">verified</span>
+            </div>
+            <div class="font-bold">Guaranteed Satisfaction</div>
+          </div>
+          <p class="text-sm text-on-surface-variant">We don't leave until you're completely happy with the coolness
+            levels in your room.</p>
+        </div>
+      </div>
+      <div class="space-y-10">
+        <div>
+          <span class="text-primary font-bold tracking-widest text-sm uppercase">The Saiful Difference</span>
+          <h2 class="text-4xl font-extrabold font-headline mt-4 text-on-surface">Why Hundreds Trust Our Hands</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div class="p-6 rounded-xl bg-surface-container-low hover:bg-primary transition-colors group cursor-default">
+            <span
+              class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors mb-4">timer</span>
+            <h4 class="text-xl font-bold mb-2 group-hover:text-white transition-colors">Fast Response</h4>
+            <p class="text-on-surface-variant text-sm group-hover:text-white/80">We arrive within 90 minutes of your
+              call anywhere in the city.</p>
+          </div>
+          <div class="p-6 rounded-xl bg-surface-container-low hover:bg-primary transition-colors group cursor-default">
+            <span
+              class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors mb-4">payments</span>
+            <h4 class="text-xl font-bold mb-2 group-hover:text-white transition-colors">Affordable Pricing</h4>
+            <p class="text-on-surface-variant text-sm group-hover:text-white/80">Upfront quotes. No hidden fees or
+              surprise technician costs.</p>
+          </div>
+          <div class="p-6 rounded-xl bg-surface-container-low hover:bg-primary transition-colors group cursor-default">
+            <span
+              class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors mb-4">construction</span>
+            <h4 class="text-xl font-bold mb-2 group-hover:text-white transition-colors">Skilled Technicians</h4>
+            <p class="text-on-surface-variant text-sm group-hover:text-white/80">Every pro is background-checked and
+              factory-trained.</p>
+          </div>
+          <div class="p-6 rounded-xl bg-surface-container-low hover:bg-primary transition-colors group cursor-default">
+            <span
+              class="material-symbols-outlined text-4xl text-primary group-hover:text-white transition-colors mb-4">workspace_premium</span>
+            <h4 class="text-xl font-bold mb-2 group-hover:text-white transition-colors">Guaranteed Service</h4>
+            <p class="text-on-surface-variant text-sm group-hover:text-white/80">30-day post-service warranty on all
+              repair works.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Process Flow -->
+  <section class="py-24 bg-surface-container-highest/30">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-20">
+        <span class="text-primary font-bold tracking-widest text-sm uppercase">How It Works</span>
+        <h2 class="text-4xl font-extrabold font-headline mt-4 text-on-surface">Cooling Your Home in 4 Steps</h2>
+      </div>
+      <div class="relative">
+        <!-- Connector Line -->
+        <div class="hidden lg:block absolute top-1/2 left-0 w-full h-1 bg-primary/10 -translate-y-1/2"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <div class="relative bg-white p-8 rounded-xl shadow-lg text-center flex flex-col items-center group">
+            <div
+              class="h-16 w-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10 group-hover:scale-110 transition-transform">
+              1</div>
+            <span class="material-symbols-outlined text-4xl text-primary mb-4">edit_calendar</span>
+            <h5 class="text-xl font-bold mb-2">Book</h5>
+            <p class="text-on-surface-variant text-sm">Call or book online. Pick your preferred slot.</p>
+          </div>
+          <div class="relative bg-white p-8 rounded-xl shadow-lg text-center flex flex-col items-center group">
+            <div
+              class="h-16 w-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10 group-hover:scale-110 transition-transform">
+              2</div>
+            <span class="material-symbols-outlined text-4xl text-primary mb-4">hail</span>
+            <h5 class="text-xl font-bold mb-2">Arrive</h5>
+            <p class="text-on-surface-variant text-sm">Our expert arrives at your doorstep on time.</p>
+          </div>
+          <div class="relative bg-white p-8 rounded-xl shadow-lg text-center flex flex-col items-center group">
+            <div
+              class="h-16 w-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10 group-hover:scale-110 transition-transform">
+              3</div>
+            <span class="material-symbols-outlined text-4xl text-primary mb-4">troubleshoot</span>
+            <h5 class="text-xl font-bold mb-2">Diagnose</h5>
+            <p class="text-on-surface-variant text-sm">Complete health check and instant repair quote.</p>
+          </div>
+          <div class="relative bg-white p-8 rounded-xl shadow-lg text-center flex flex-col items-center group">
+            <div
+              class="h-16 w-16 bg-primary text-white rounded-full flex items-center justify-center font-bold text-2xl mb-6 relative z-10 group-hover:scale-110 transition-transform">
+              4</div>
+            <span class="material-symbols-outlined text-4xl text-primary mb-4">ac_unit</span>
+            <h5 class="text-xl font-bold mb-2">Repair</h5>
+            <p class="text-on-surface-variant text-sm">Precision fixing and room cooling test.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonials -->
+  <section class="py-24 bg-primary/5">
+    <div class="max-w-7xl mx-auto px-8">
+      <div class="text-center mb-16">
+        <span class="text-primary font-bold tracking-widest text-sm uppercase">Happy Clients</span>
+        <h2 class="text-4xl font-extrabold font-headline mt-4 text-on-surface">The Talk of the Town</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow">
+          <div class="flex text-tertiary-fixed mb-4">
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+          </div>
+          <p class="italic text-on-surface mb-8">"Saiful AC team is incredibly professional. My AC was making a loud
+            noise, and they fixed it within an hour. Highly recommended!"</p>
+          <div class="flex items-center gap-4">
+            <img class="w-12 h-12 rounded-full object-cover" data-alt="Headshot of a middle-aged man smiling"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuChg0gCYeSdyVSeKguzCRZV4B7yLoByr1mHcwsc3b5MRYu5-52a2JIQFh5iCPErgidNsvYa0ly10jVKHY5MBEKQDqrGX_o6WiRedOgkD27vMXfZn_SDumZzFvhThmulaEdRFVj0i253ikRqlplHMd_ouYEheUaDNCpD79W1EPIJJnLejbFctg8RVgtkMPnLwG4AeNBUn7w8XqyGZEhF0zn4aKbgfPuSFm_dzcsGHuASFJTYONmBr__KWVCIioJ0VC0xezeFpOQ5k5P3" />
+            <div>
+              <div class="font-bold">Rahul Sharma</div>
+              <div class="text-xs text-on-surface-variant">South Delhi Resident</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow transform md:scale-105 z-10">
+          <div class="flex text-tertiary-fixed mb-4">
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+          </div>
+          <p class="italic text-on-surface mb-8">"I called them for gas refilling. They were very honest about the
+            pricing and showed me the pressure levels before and after. Great service."</p>
+          <div class="flex items-center gap-4">
+            <img class="w-12 h-12 rounded-full object-cover" data-alt="Headshot of a smiling young woman"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrnPmGG4rAdtWBV8FRx3yFcOyp02IlY7CxFxLp6ybAE5owJ-HPansDn7MT4oFgb92bwmlSaDpLWIX3xU_8rWsCV-MHSJez0_qXXLRXcsogz0hb5kum4p7Hovw6alShxcYcQu-f5bPPPjAZLPH4Rl-0YJCQ0YrF9WcvYSCqSK7K6wyQvqiuw8_bn544dF57qsU0qK9cf17vRpo7XGTNEmP8djWvJSkMSj81DZFWOW6pobQaX11MfeutHmGQKJ5xJALHR2-EnooOnvdp" />
+            <div>
+              <div class="font-bold">Anjali Gupta</div>
+              <div class="text-xs text-on-surface-variant">Dwarka Homeowner</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow">
+          <div class="flex text-tertiary-fixed mb-4">
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+            <span class="material-symbols-outlined" data-weight="fill">star</span>
+            <span class="material-symbols-outlined" data-weight="fill">star_half</span>
+          </div>
+          <p class="italic text-on-surface mb-8">"Cleanest installation work I've seen. No debris left behind and the
+            wiring was neatly tucked away. Will definitely use them again."</p>
+          <div class="flex items-center gap-4">
+            <img class="w-12 h-12 rounded-full object-cover" data-alt="Headshot of a businessman smiling"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7x6_6C6nT8a7EEXYOjNYr5cIIdPW5o1E6KO8PwpaeP40Xo88i8dHcVFMYbbjnzlI2iJOtNo7kX2CTPhjj0XSBgFlzMqaDbO6fwOafhMMfffcdh5PBVw2m4Kwv5v9WOEYpjTcY5gPbPb1LD7441FEYgcElE1CcyR0ZwYq_MDX850hg4pS1gEKQT5_-MNQyZUq2qGupEeBvrUoK2K3azHqvr05y6EfjZk7cvd1PWBNgU3yszHdFnAbcdGqC9vyOu3-waHp6eSq0HnyU" />
+            <div>
+              <div class="font-bold">Vikram Mehra</div>
+              <div class="text-xs text-on-surface-variant">Rohini Business Owner</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Mid-CTA Banner -->
+  <section class="py-16 px-8 max-w-7xl mx-auto">
+    <div
+      class="bg-primary rounded-[2.5rem] p-12 md:p-20 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+      <!-- Decorative Elements -->
+      <div class="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+      <div class="relative z-10 text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl font-extrabold font-headline text-white mb-6">AC Not Cooling? <br />We Fix It
+          Today.</h2>
+        <p class="text-white/80 text-lg max-w-md">Our mobile repair units are stationed across the city. Average wait
+          time: 45 minutes.</p>
+      </div>
+      <div class="relative z-10 flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+        <a class="flex items-center justify-center gap-3 bg-white text-primary px-10 py-5 rounded-2xl font-black text-xl hover:bg-surface-container-low transition-all shadow-2xl"
+          href="tel:+1234567890">
+          <span class="material-symbols-outlined">call</span> Call Now
+        </a>
+        <a class="flex items-center justify-center gap-3 bg-green-500 text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-green-600 transition-all shadow-2xl"
+          href="#">
+          <span class="material-symbols-outlined">chat</span> WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Final CTA -->
+  <section class="py-32 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-8 text-center">
+      <h2 class="text-5xl md:text-7xl font-extrabold font-headline mb-8 tracking-tighter">Ready to Chill?</h2>
+      <p class="text-xl text-on-surface-variant max-w-2xl mx-auto mb-16">Don't sweat the heat. Let our professional team
+        restore your comfort today with a single click or call.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="bg-surface-container-low p-10 rounded-3xl flex flex-col items-center">
+          <div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-4xl">calendar_month</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Book Online</h3>
+          <p class="text-on-surface-variant mb-8">Schedule a slot for tomorrow or later this week.</p>
+          <button class="w-full bg-on-surface text-white py-4 rounded-xl font-bold">Schedule Appointment</button>
+        </div>
+        <div class="bg-primary-container/30 p-10 rounded-3xl flex flex-col items-center border-2 border-primary">
+          <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-4xl">emergency_home</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Urgent Repair</h3>
+          <p class="text-on-surface-variant mb-8">Need it fixed now? Use our express service line.</p>
+          <button class="w-full bg-primary text-white py-4 rounded-xl font-bold">Priority Call</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-slate-900 dark:bg-black w-full px-8 py-12">
+    <div
+      class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-12 border-b border-white/10 pb-12">
+      <div>
+        <div class="text-lg font-bold text-white mb-4">AC Repair &amp; Services</div>
+        <p class="text-slate-400 max-w-xs text-sm">© 2024 AC Repair &amp; Services. All rights reserved.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+        <div>
+          <h5 class="text-white font-bold mb-4 text-sm">Services</h5>
+          <ul class="space-y-2">
+            <li><a class="text-slate-400 text-sm hover:text-white transition-colors" href="#">AC Repair</a></li>
+            <li><a class="text-slate-400 text-sm hover:text-white transition-colors" href="#">Installation</a></li>
+            <li><a class="text-slate-400 text-sm hover:text-white transition-colors" href="#">Gas Filling</a></li>
+            <li><a class="text-slate-400 text-sm hover:text-white transition-colors" href="#">Cleaning</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="text-white font-bold mb-4 text-sm">Company</h5>
+          <ul class="space-y-2">
+            <li><a class="text-slate-400 text-sm hover:text-white transition-colors" href="#">Why Us</a></li>
+            <li><a class="text-slate-400 text-sm hover:text-white transition-colors" href="#">Reviews</a></li>
+            <li><a class="text-slate-400 text-sm hover:text-white transition-colors" href="#">Sitemap</a></li>
+            <li><a class="text-slate-400 text-sm hover:text-white transition-colors" href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-span-2">
+          <h5 class="text-white font-bold mb-4 text-sm">Connect</h5>
+          <div class="flex gap-4">
+            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary transition-all"
+              href="#">
+              <span class="material-symbols-outlined text-sm">social_leaderboard</span>
+            </a>
+            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary transition-all"
+              href="#">
+              <span class="material-symbols-outlined text-sm">share</span>
+            </a>
+            <a class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-primary transition-all"
+              href="#">
+              <span class="material-symbols-outlined text-sm">call</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto py-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="text-slate-400 text-sm">© 2024 AC Repair &amp; Services. All rights reserved.</div>
+      <div class="flex gap-6">
+        <a class="text-slate-400 text-sm hover:text-white transition-colors" href="#">© 2024 AC Repair &amp; Services.
+          All rights reserved.</a>
+        <a class="text-slate-400 text-sm hover:text-white transition-colors" href="#">© 2024 AC Repair &amp; Services.
+          All rights reserved.</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Hamburger JS -->
+  <script>
+  (function () {
+    var btn  = document.getElementById('hamburger-btn');
+    var menu = document.getElementById('mobile-menu');
+    if (!btn || !menu) return;
+
+    function openMenu() {
+      menu.classList.add('menu-open');
+      btn.classList.add('menu-active');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+    function closeMenu() {
+      menu.classList.remove('menu-open');
+      btn.classList.remove('menu-active');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      menu.classList.contains('menu-open') ? closeMenu() : openMenu();
+    });
+
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', function (e) {
+      var nav = document.getElementById('main-nav');
+      if (nav && !nav.contains(e.target)) closeMenu();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+  }());
+  </script>
+</body>
+
+</html>
